@@ -67,11 +67,11 @@ if (window.matchMedia('(pointer: fine)').matches){
 // ===== Typed text effect =====
 const typedEl = document.getElementById('typed');
 const phrases = [
-  'EV powertrain simulation',
-  'Battery thermal management',
-  'MATLAB & Simulink modeling',
-  'Predictive & MPC control',
-  'Hardware validation & testing'
+  'Industrial control systems',
+  'Embedded systems and IoT',
+  'Sensors and instrumentation',
+  'Closed-loop thermal control',
+  'IT project governance'
 ];
 let phraseIdx = 0, charIdx = 0, deleting = false;
 
