@@ -474,3 +474,35 @@ ul{list-style:none;}
   .carousel-slide{ padding:16px 44px 38px; }
   .carousel-btn{ width:34px; height:34px; }
 }
+
+
+/* ===== Colour theme override (keep at the very end of this file) ===== */
+:root{
+  --bg: #0e1013;
+  --bg-elevated: #15181d;
+  --surface: rgba(255,255,255,0.035);
+  --surface-strong: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.09);
+  --text: #f2f0ec;
+  --text-dim: #a8a39a;
+  --text-dimmer: #77736b;
+  --accent: #ff7a2f;
+  --accent-2: #ffc247;
+}
+::selection{ background: var(--accent); color:#0e1013; }
+.cursor-glow{ background: radial-gradient(circle, rgba(255,122,47,0.12) 0%, rgba(255,194,71,0.06) 40%, transparent 70%); }
+.navbar.scrolled{ background: rgba(14,16,19,0.75); }
+@media (max-width: 860px){ .nav-links{ background: rgba(21,24,29,0.98); } }
+.grid-overlay{
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+}
+.btn-primary{ color:#0e1013; box-shadow: 0 8px 24px -8px rgba(255,122,47,.6); }
+.btn-primary:hover{ box-shadow: 0 12px 30px -8px rgba(255,122,47,.8); }
+.project-card-icon{ color:#0e1013; }
+.timeline-dot{ box-shadow: 0 0 0 4px rgba(255,194,71,.12); }
+.project-flagship:hover{ box-shadow: 0 24px 60px -30px rgba(255,122,47,.4); }
+.project-card:hover{ box-shadow: 0 20px 44px -26px rgba(255,122,47,.4); }
+.badge{ background: rgba(255,122,47,.12); border-color: rgba(255,122,47,.3); }
+.flagship-body code{ background:rgba(255,255,255,.05); }
