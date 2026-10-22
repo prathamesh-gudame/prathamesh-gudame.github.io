@@ -191,54 +191,88 @@
       <h2 class="section-title reveal">Featured work</h2>
 
       <!-- Flagship project -->
-      <div class="project-flagship reveal">
-        <div class="flagship-media">
-          <svg viewBox="0 0 360 345" role="img" aria-label="Pipeline diagram: audio input, MFCC features, CNN classifier, emotion label" style="width:100%;height:auto;max-width:360px;font-family:var(--font-body);">
-            <g style="fill:#ffffff;stroke:#5b7cff;stroke-width:1.5;">
-              <rect x="30" y="10" width="300" height="58" rx="12"/>
-              <rect x="30" y="99" width="300" height="58" rx="12"/>
-              <rect x="30" y="188" width="300" height="58" rx="12"/>
-            </g>
-            <rect x="30" y="277" width="300" height="58" rx="12" style="fill:#ffffff;stroke:#12a392;stroke-width:2;"/>
-            <g style="stroke:#5d6488;stroke-width:1.5;fill:none;">
-              <path d="M180 70V92"/>
-              <path d="M180 159V181"/>
-              <path d="M180 248V270"/>
-            </g>
-            <g style="fill:#5d6488;">
-              <polygon points="175,90 185,90 180,98"/>
-              <polygon points="175,179 185,179 180,187"/>
-              <polygon points="175,268 185,268 180,276"/>
-            </g>
-            <g style="fill:#0b1020;font-size:15px;font-weight:600;">
-              <text x="48" y="34">Audio input</text>
-              <text x="48" y="123">MFCC features</text>
-              <text x="48" y="212">CNN classifier</text>
-              <text x="48" y="301">Emotion label</text>
-            </g>
-            <g style="fill:#4a5072;font-size:12.5px;">
-              <text x="48" y="53">Real-time speech audio</text>
-              <text x="48" y="142">Audio feature extraction</text>
-              <text x="48" y="231">TensorFlow / Keras</text>
-              <text x="48" y="320">Shown in the web application</text>
-            </g>
-          </svg>
-          <!-- When you have a screenshot of the app, save it as assets/img/speech-emotion.png and replace the whole svg above with: <img src="assets/img/speech-emotion.png" alt="Screenshot of the speech emotion recognition web app"> -->
+           <div class="project-flagship reveal">
+        <div class="flagship-media has-carousel">
+          <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Speech Emotion Recognition project gallery" tabindex="0">
+            <div class="carousel-track">
+
+              <figure class="carousel-slide">
+                <div class="slide-media">
+                  <svg viewBox="0 0 360 345" role="img" aria-label="Pipeline diagram: audio input, MFCC features, CNN classifier, emotion label" style="font-family:var(--font-body);">
+                    <g style="fill:#ffffff;stroke:#5b7cff;stroke-width:1.5;">
+                      <rect x="30" y="10" width="300" height="58" rx="12"/>
+                      <rect x="30" y="99" width="300" height="58" rx="12"/>
+                      <rect x="30" y="188" width="300" height="58" rx="12"/>
+                    </g>
+                    <rect x="30" y="277" width="300" height="58" rx="12" style="fill:#ffffff;stroke:#12a392;stroke-width:2;"/>
+                    <g style="stroke:#5d6488;stroke-width:1.5;fill:none;">
+                      <path d="M180 70V92"/>
+                      <path d="M180 159V181"/>
+                      <path d="M180 248V270"/>
+                    </g>
+                    <g style="fill:#5d6488;">
+                      <polygon points="175,90 185,90 180,98"/>
+                      <polygon points="175,179 185,179 180,187"/>
+                      <polygon points="175,268 185,268 180,276"/>
+                    </g>
+                    <g style="fill:#0b1020;font-size:15px;font-weight:600;">
+                      <text x="48" y="34">Audio input</text>
+                      <text x="48" y="123">MFCC features</text>
+                      <text x="48" y="212">CNN classifier</text>
+                      <text x="48" y="301">Emotion label</text>
+                    </g>
+                    <g style="fill:#4a5072;font-size:12.5px;">
+                      <text x="48" y="53">Recorded speech clips</text>
+                      <text x="48" y="142">Extracted with Librosa</text>
+                      <text x="48" y="231">Trained in TensorFlow</text>
+                      <text x="48" y="320">One of seven emotions</text>
+                    </g>
+                  </svg>
+                </div>
+                <figcaption>Pipeline: from a speech clip to a predicted emotion.</figcaption>
+              </figure>
+
+              <figure class="carousel-slide">
+                <div class="slide-media">
+                  <img src="assets/img/projects/ser-dataset.png" alt="Bar chart of the number of audio clips for each of the seven emotion classes; neutral has the most clips">
+                </div>
+                <figcaption>Dataset: seven emotion classes, with neutral having the most clips.</figcaption>
+              </figure>
+
+              <figure class="carousel-slide">
+                <div class="slide-media">
+                  <img src="assets/img/projects/ser-accuracy.png" alt="Line chart of training and testing accuracy over 50 epochs, ending at about 96 percent on test data">
+                </div>
+                <figcaption>Training and test accuracy over 50 epochs, ending at about 96% on test data.</figcaption>
+              </figure>
+
+              <figure class="carousel-slide">
+                <div class="slide-media">
+                  <img src="assets/img/projects/ser-live-prediction.png" alt="Notebook output: a recorded voice clip is passed to the model, which predicts the emotion angry">
+                </div>
+                <figcaption>Recording a voice clip in the notebook and predicting its emotion.</figcaption>
+              </figure>
+
+            </div>
+            <button type="button" class="carousel-btn prev" aria-label="Previous slide">&#8249;</button>
+            <button type="button" class="carousel-btn next" aria-label="Next slide">&#8250;</button>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
         <div class="flagship-body">
-          <span class="badge">Final-year B.E. project · 2023-24</span>
+          <span class="badge">Final-year B.E. project · team of four · 2023-24</span>
           <h3>Speech Emotion Recognition using Machine Learning</h3>
           <p>
-            A CNN-based web application that classifies human emotions from audio
-            input in real time, built on MFCC audio features and deep learning.
+            A CNN that recognises emotions in speech from MFCC audio features, and
+            can classify a newly recorded voice clip.
           </p>
           <ul>
-            <li>Developed a CNN-based web application that classifies human emotions from audio in real time, across multiple emotional states.</li>
-            <li>Applied signal processing for audio feature extraction (MFCCs), a CNN architecture for classification, and NLP techniques in one recognition pipeline.</li>
-            <!-- TODO: add a bullet with your real accuracy, the dataset you used and the number of emotion classes -->
+            <li>Trained a CNN in TensorFlow to classify speech into seven emotions (angry, disgust, fear, happy, neutral, sad, surprise), using MFCC features extracted with Librosa.</li>
+            <li>Reached about 96% accuracy on test data after 50 training epochs.</li>
+            <li>The notebook can record a new voice clip and classify it straight away.</li>
           </ul>
           <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">TensorFlow/Keras</span><span class="tag">MFCC</span><span class="tag">CNN</span><span class="tag">Flask</span>
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Librosa</span><span class="tag">MFCC</span><span class="tag">CNN</span><span class="tag">Google Colab</span>
           </div>
           <!-- TODO: when the project is on GitHub, add this block below the tags, with your repository name in the link:
           <div class="project-links">
