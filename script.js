@@ -129,3 +129,54 @@ document.querySelectorAll('.project-card, .project-flagship').forEach(card => {
     card.style.transform = '';
   });
 });
+
+
+// ===== Carousels =====
+document.querySelectorAll('[data-carousel]').forEach(root => {
+  const track = root.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const dotsEl = root.querySelector('.carousel-dots');
+  const prevBtn = root.querySelector('.carousel-btn.prev');
+  const nextBtn = root.querySelector('.carousel-btn.next');
+  const smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  let index = 0;
+
+  const dots = slides.map((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'carousel-dot';
+    dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+    dot.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(dot);
+    return dot;
+  });
+
+  function update(){
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === slides.length - 1;
+  }
+
+  function goTo(i){
+    index = Math.max(0, Math.min(slides.length - 1, i));
+    track.scrollTo({ left: index * track.clientWidth, behavior: smooth });
+    update();
+  }
+
+  track.addEventListener('scroll', () => {
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    if (i !== index){ index = i; update(); }
+  }, { passive: true });
+
+  prevBtn.addEventListener('click', () => goTo(index - 1));
+  nextBtn.addEventListener('click', () => goTo(index + 1));
+  root.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') goTo(index - 1);
+    if (e.key === 'ArrowRight') goTo(index + 1);
+  });
+  window.addEventListener('resize', () => {
+    track.scrollTo({ left: index * track.clientWidth, behavior: 'auto' });
+  });
+
+  update();
+});
