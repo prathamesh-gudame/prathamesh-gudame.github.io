@@ -1,12 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prathamesh Gudame | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atharva Nikam — Mechatronics Engineer</title>
+<meta name="description" content="Atharva Nikam — Mechatronics M.Sc. student specializing in EV powertrain & battery thermal simulation, MATLAB/Simulink, and hardware validation.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Prathamesh Gudame</h1>
-  <p>M.Sc. student in Electrical Engineering and Information Technology at KIT.</p>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">A<span>N</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="assets/resume/Atharva_Nikam_Resume.pdf" target="_blank" class="btn btn-ghost nav-cta">Resume</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <p class="hero-eyebrow reveal">Weingarten, Germany</p>
+      <h1 class="hero-title reveal">
+        Hi, I'm <span class="gradient-text">Atharva Nikam</span>
+      </h1>
+      <h2 class="hero-role reveal">
+        Mechatronics Engineer <span class="dot">·</span> M.Sc.
+      </h2>
+      <p class="hero-typed reveal">
+        <span id="typed"></span><span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-desc reveal">
+        Simulating EV powertrains and battery thermal systems in MATLAB/Simulink,
+        validating hardware with oscilloscopes and multimeters, and turning
+        messy legacy code into documented, trustworthy systems.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="assets/resume/Atharva_Nikam_Resume.pdf" target="_blank" class="btn btn-outline">Download Resume</a>
+      </div>
+      <div class="hero-socials reveal">
+        <a href="https://github.com/atharvaajaynikam4601-netizen" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/atharva--nikam/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="mailto:atharvaajaynikam4601@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm18.4 2H3.6l8.4 6.6L20.4 6ZM3 8.24V18h18V8.24l-8.6 6.76a1 1 0 0 1-1.24 0L3 8.24Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section-tag reveal">01 — About</p>
+      <h2 class="section-title reveal">Who I am</h2>
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <div class="photo-frame">
+            <img src="assets/img/profile.png" alt="Atharva Nikam">
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p>
+            I'm a Mechatronics Master's student with hands-on experience in
+            <strong>EV powertrain and battery system simulation</strong>, prototype
+            development, laboratory testing, and engineering documentation — built
+            across industrial roles and university projects.
+          </p>
+          <p>
+            I combine <strong>MATLAB/Simulink-based modeling</strong> with functional
+            validation using oscilloscopes and multimeters, backed by a
+            <strong>CAD/FEM mechanical design</strong> background from prior industry
+            roles. That mix — simulation, hardware, and documentation — is what I bring
+            to engineering roles.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="4">0</span>
+              <span class="stat-label">Engineering roles</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="7">0</span>
+              <span class="stat-label">Featured projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="4">0</span>
+              <span class="stat-label">Languages spoken</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section alt">
+    <div class="container">
+      <p class="section-tag reveal">02 — Experience</p>
+      <h2 class="section-title reveal">Where I've worked</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Feb 2024 — Jun 2024</span>
+            <h3>Mechanical Design Engineer</h3>
+            <span class="timeline-org">Chakra Technologies, Navi Mumbai, India</span>
+            <p class="timeline-story">
+              Four months living in the gap between "looks right on screen" and "survives the shop floor." I'd model an assembly in SolidWorks, run it through ANSYS Workbench before anyone touched material, and only then release drawings, BOMs, and tolerances a machinist could pick up cold. The habit that stuck: catching a weak point in simulation is a five-minute fix; catching it after a prototype is built is a five-week one.
+            </p>
+            <span class="timeline-highlight">Fewer redesign cycles, cleaner handoff to manufacturing.</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Jul 2023 — Jan 2024</span>
+            <h3>Graduate Trainee Engineer</h3>
+            <span class="timeline-org">LCT Pvt. Ltd., Navi Mumbai, India</span>
+            <p class="timeline-story">
+              First real exposure to equipment where a design oversight isn't cosmetic — these were testing rigs rated 2 to 10 tons. Five design changes came out of standing next to the machines while they ran and asking the assembly crew what actually slowed them down, not just reading the spec sheet. Designing with assembly sequence in mind, not just final geometry, is what shaved roughly two weeks off workshop prep.
+            </p>
+            <span class="timeline-highlight">Learned to design for the person assembling it, not just the drawing.</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Sep 2022 — Nov 2022</span>
+            <h3>Junior Faculty Intern</h3>
+            <span class="timeline-org">DCIT, India</span>
+            <p class="timeline-story">
+              Teaching CAD turned out to be the fastest way to actually understand it — you can't hand-wave GD&amp;T when a room of students is about to ask why a callout is toleranced that way. Reviewed 40+ student models and drawings for exactly that kind of gap between "drew it right" and "understood it."
+            </p>
+            <span class="timeline-highlight">92% first-attempt certification pass rate in that cohort — the metric I still measure explanations against.</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-title reveal">Education</h3>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <span class="timeline-date">Sep 2024 — Present</span>
+          <h4>M.Sc. Mechatronics</h4>
+          <p>Ravensburg-Weingarten University of Applied Sciences, Germany</p>
+          <span class="edu-tag">Advanced Hybrids · Electric Drives · Power Electronics</span>
+        </div>
+        <div class="edu-card reveal">
+          <span class="timeline-date">Dec 2020 — Jul 2023</span>
+          <h4>B.E. Mechanical Engineering</h4>
+          <p>Bharati Vidyapeeth College of Engineering, India</p>
+          <span class="edu-tag">Machine Design · Product Development · Manufacturing</span>
+        </div>
+        <div class="edu-card reveal">
+          <span class="timeline-date">Aug 2017 — Nov 2020</span>
+          <h4>Diploma, Mechanical Engineering</h4>
+          <p>Bharati Vidyapeeth College of Engineering, India</p>
+          <span class="edu-tag">Elements of Machine Design · Automobile Engineering</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-tag reveal">03 — Projects</p>
+      <h2 class="section-title reveal">Featured work</h2>
+
+      <!-- Flagship project -->
+      <div class="project-flagship reveal">
+        <div class="flagship-media">
+          <img src="assets/img/ev-cooling-benchmark.png" alt="Controller benchmarking analysis — predictive vs reactive EV battery cooling">
+        </div>
+        <div class="flagship-body">
+          <span class="badge">MathWorks Challenge Project #194</span>
+          <h3>Predictive Electric Vehicle Cooling</h3>
+          <p>
+            Simscape Fluids battery thermal plant with reactive, predictive-lookahead,
+            and constrained nonlinear MPC controllers — built to replace slow-reacting
+            thermostatic cooling with forecast-aware control.
+          </p>
+          <div class="metric-row">
+            <div class="metric"><strong>0s</strong><span>time above 35°C safety limit (MPC / predictive) vs 313s reactive</span></div>
+            <div class="metric"><strong>33.6°C</strong><span>peak battery temp under MPC vs 59.3°C uncooled</span></div>
+            <div class="metric"><strong>7.7%</strong><span>battery aging reduction vs reactive baseline</span></div>
+          </div>
+          <ul>
+            <li>Coupled a control-oriented MATLAB plant (longitudinal dynamics, motor/inverter efficiency, coulomb-counting battery model) with a high-fidelity Simscape Fluids cooling loop.</li>
+            <li>Designed a receding-horizon <code>fmincon</code> MPC controller enforcing a hard 35°C safety constraint while minimizing thermal error, energy use, and actuator slew rate.</li>
+            <li>Built a Kalman filter for SOC estimation and an Arrhenius SEI-growth model translating temperature exposure into battery-aging and range impact.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">Simscape Fluids</span><span class="tag">MPC</span><span class="tag">Kalman Filter</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/atharvaajaynikam4601-netizen/Predictive-Electric-Vehicle-Cooling" target="_blank" rel="noopener" class="btn btn-ghost sm">View Repo →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project grid -->
+      <div class="project-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          </div>
+          <span class="badge progress"><i></i>RWU Research · In Progress</span>
+          <h3>Low-Cost Citizen Heat &amp; Position Mapping System</h3>
+          <p>Academic research project with Prof. Dr. Markus Pfeil (Embedded Systems, RWU) — a low-cost, battery-powered handheld device for crowd-sourced, street-level urban heat mapping, piloted in Weingarten.</p>
+          <ul class="compact">
+            <li>Evaluated LoRaWAN vs. GSM vs. hybrid store-and-forward connectivity and multi-GNSS (NEO-M8N/M9N class) positioning for the best accuracy/power/cost balance.</li>
+            <li>Scoped firmware state machine, sensor payload (air temp + BME280 humidity + MLX90614 IR surface temp), and an IDW/Kriging spatial-interpolation backend, benchmarked against NOAA/CAPA Heat Watch methodology.</li>
+            <li>Drafted 6-month timeline and budget for a 30–50 unit pilot fleet at €50–100/unit.</li>
+          </ul>
+          <div class="tag-row"><span class="tag">ESP32</span><span class="tag">LoRaWAN</span><span class="tag">GNSS</span><span class="tag">IoT</span><span class="tag">Spatial Interpolation</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M4 12a8 8 0 0 1 8-8V2l4 3-4 3V6a6 6 0 1 0 6 6h2a8 8 0 1 1-16 0Zm7-2h2v2.59l1.7 1.7-1.42 1.42L11 13.41V10Z"/></svg>
+          </div>
+          <span class="badge progress"><i></i>MathWorks Challenge #246 · In Progress</span>
+          <span class="timeline-date proj-date">Aug 2026 — Present</span>
+          <h3>Energy Management for a 2-Motor BEV using MPC</h3>
+          <p>MathWorks Challenge Project #246 — a Model-Predictive Control strategy that optimally splits torque across a dual-motor BEV powertrain to cut energy use and stretch range.</p>
+          <ul class="compact">
+            <li>Building the baseline dual-motor BEV + battery model in Powertrain Blockset's Virtual Vehicle Composer, benchmarked across WLTP Class 3, HWFET, FTP75, and US06 drive cycles.</li>
+            <li>Designing an MPC torque-distribution controller (MPC Toolbox) running as a 10ms fixed-step model reference, targeting measurable energy/MPGe gains over the baseline split under hard constraint compliance.</li>
+          </ul>
+          <div class="tag-row"><span class="tag">MATLAB</span><span class="tag">Simulink</span><span class="tag">MPC</span><span class="tag">Powertrain Blockset</span><span class="tag">Dual-Motor BEV</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2Zm0 2.2 7 3.5-7 3.5-7-3.5 7-3.5ZM4 9.3l7 3.5v7.9l-7-3.5V9.3Zm9 11.4v-7.9l7-3.5v7.9l-7 3.5Z"/></svg>
+          </div>
+          <span class="badge muted">Independent Project</span>
+          <h3>EV Powertrain, Thermal &amp; SOC Estimation</h3>
+          <p>MATLAB simulation of an EV powertrain — battery electrical/thermal behaviour, energy management, and Kalman-filter SOC estimation validated against drive-cycle data.</p>
+          <ul class="compact">
+            <li>SOC estimation accuracy within <strong>1.29%</strong> against standard drive-cycle data.</li>
+            <li>Regenerative braking logic and thermal modeling evaluated against power-electronics performance.</li>
+          </ul>
+          <div class="tag-row"><span class="tag">MATLAB</span><span class="tag">Kalman Filter</span><span class="tag">Battery Modeling</span></div>
+          <a href="https://github.com/atharvaajaynikam4601-netizen/EV-Powertrain-Dynamics-Battery-Electrical-Thermal-Modeling-and-SOC-Estimation-using-Kalman-Filter-" target="_blank" rel="noopener" class="card-link">View Repo →</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4Z"/></svg>
+          </div>
+          <span class="badge muted">IBM SkillsBuild · 96/100</span>
+          <h3>AI-Assisted Legacy Code Modernization</h3>
+          <p>Diagnosed a silent Python-2 floor-division bug in a 6,000-vehicle fleet-monitoring script, then directed an AI coding agent (IBM Bob) through scoped, audited fixes.</p>
+          <ul class="compact">
+            <li>Caught an unauthorized threshold change proposed by the agent and rejected it before merge.</li>
+            <li>Wrote a data-driven breakdown-risk model using km-since-service, avg. daily km, and load factor instead of raw mileage.</li>
+          </ul>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">AI-Assisted Dev</span><span class="tag">Code Auditing</span></div>
+          <div class="card-link-row">
+            <a href="https://github.com/atharvaajaynikam4601-netizen/proov-km-waechter-fix" target="_blank" rel="noopener" class="card-link">View Repo →</a>
+            <a href="assets/cert/IBM_Certificate.pdf" target="_blank" class="card-link">Certificate →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M12 2 1 21h22L12 2Zm0 4.5 6.9 12H5.1L12 6.5ZM11 10v4h2v-4h-2Zm0 6v2h2v-2h-2Z"/></svg>
+          </div>
+          <span class="badge muted">University Project</span>
+          <h3>Multi-Purpose Agricultural Vehicle</h3>
+          <p>Structural chassis architecture and mechanical transmission layout for a multi-functional utility vehicle prototype.</p>
+          <ul class="compact">
+            <li>Reduced overall vehicle weight by <strong>~12%</strong> through structural design improvements.</li>
+            <li>Field-validated prototype performance within <strong>5%</strong> of design calculations.</li>
+          </ul>
+          <div class="tag-row"><span class="tag">SolidWorks</span><span class="tag">AutoCAD</span><span class="tag">Chassis Design</span></div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path fill="currentColor" d="M5 11h14l-1.5-5.5a2 2 0 0 0-1.93-1.5H8.43a2 2 0 0 0-1.93 1.5L5 11Zm-2 2v6a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-6a2 2 0 0 0-.6-1.4L18 6a3 3 0 0 0-2.8-2H8.8A3 3 0 0 0 6 6L3.6 11.6A2 2 0 0 0 3 13Zm4.5 1a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/></svg>
+          </div>
+          <span class="badge muted">Collegiate Motorsports</span>
+          <h3>BAJA Collegiate Motorsports</h3>
+          <p>Drivetrain mounting components and mechanical assemblies for an off-road BAJA SAE competition vehicle.</p>
+          <ul class="compact">
+            <li>Integrated mechanical subsystems, improving overall vehicle assembly efficiency.</li>
+            <li>Assembly documentation enabled prototype integration several days ahead of schedule.</li>
+          </ul>
+          <div class="tag-row"><span class="tag">SolidWorks</span><span class="tag">AutoCAD</span><span class="tag">Assembly Design</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <p class="section-tag reveal">04 — Skills</p>
+      <h2 class="section-title reveal">Toolbox</h2>
+
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3>Simulation &amp; Programming</h3>
+          <div class="chip-row">
+            <span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">Simscape Fluids</span>
+            <span class="chip">Python</span><span class="chip">System Simulation</span><span class="chip">ANSYS Workbench</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Automotive &amp; Power Systems</h3>
+          <div class="chip-row">
+            <span class="chip">EV Powertrain Modeling</span><span class="chip">Battery SOC Estimation</span>
+            <span class="chip">Battery Thermal Management</span><span class="chip">MPC Control</span>
+            <span class="chip">Power Electronics</span><span class="chip">Electric Drives</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Engineering Tools</h3>
+          <div class="chip-row">
+            <span class="chip">SolidWorks</span><span class="chip">CATIA V5</span><span class="chip">AutoCAD</span>
+            <span class="chip">GD&amp;T</span><span class="chip">BOM Management</span><span class="chip">Technical Documentation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lang-row reveal">
+        <div class="lang-block">
+          <h3>Languages</h3>
+          <div class="chip-row">
+            <span class="chip outline">English — C1</span>
+            <span class="chip outline">German — B1</span>
+            <span class="chip outline">Marathi — Native</span>
+            <span class="chip outline">Hindi — C1</span>
+            <span class="chip outline">Japanese — N5 (Beginner)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <p class="section-tag reveal">05 — Contact</p>
+      <h2 class="section-title reveal">Let's build something</h2>
+      <p class="contact-desc reveal">
+        Open to internships and engineering roles spanning simulation, hardware
+        validation, and documentation. Based in Weingarten, Germany — happy to
+        talk EV systems, MATLAB/Simulink, or anything mechatronics.
+      </p>
+      <div class="contact-actions reveal">
+        <a href="mailto:atharvaajaynikam4601@gmail.com" class="btn btn-primary">atharvaajaynikam4601@gmail.com</a>
+      </div>
+      <p class="contact-alt reveal">
+        University (RWU): <a href="mailto:atharvaajay.nikam@hs-weingarten.de">atharvaajay.nikam@hs-weingarten.de</a>
+      </p>
+      <div class="hero-socials reveal contact-socials">
+        <a href="https://github.com/atharvaajaynikam4601-netizen" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/atharva--nikam/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Atharva Nikam</span>
+    <span>Built with vanilla HTML, CSS &amp; JS</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
