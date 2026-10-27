@@ -64,39 +64,6 @@ if (window.matchMedia('(pointer: fine)').matches){
   });
 }
 
-// ===== Typed text effect =====
-const typedEl = document.getElementById('typed');
-const phrases = [
-  'Industrial control systems',
-  'Embedded systems and IoT',
-  'Sensors and instrumentation',
-  'Closed-loop thermal control',
-  'IT project governance'
-];
-let phraseIdx = 0, charIdx = 0, deleting = false;
-
-function typeLoop(){
-  const current = phrases[phraseIdx];
-  if (!deleting){
-    charIdx++;
-    typedEl.textContent = current.slice(0, charIdx);
-    if (charIdx === current.length){
-      deleting = true;
-      setTimeout(typeLoop, 1500);
-      return;
-    }
-  } else {
-    charIdx--;
-    typedEl.textContent = current.slice(0, charIdx);
-    if (charIdx === 0){
-      deleting = false;
-      phraseIdx = (phraseIdx + 1) % phrases.length;
-    }
-  }
-  setTimeout(typeLoop, deleting ? 35 : 55);
-}
-typeLoop();
-
 // ===== Animated stat counters =====
 const statEls = document.querySelectorAll('.stat-num');
 const statObserver = new IntersectionObserver((entries) => {
